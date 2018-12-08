@@ -1,0 +1,114 @@
+{
+    "behaviorGroups": [
+        {
+            "name": "all projects",
+            "behaviorRules": [
+                {
+                    "name": "show all projects",
+                    "actions": [
+                        "all_projects"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(all_projects)"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "specific project",
+            "behaviorRules": [
+                {
+                    "name": "ask for project",
+                    "actions": [
+                        "ask_for_project"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(search_project)"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "no project found",
+                    "actions": [
+                        "no_project_found"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(search_project)",
+                                "occurrence": "lastStep"
+                            },
+                            "children": [
+                                {
+                                    "type": "connector",
+                                    "values": {
+                                        "operator": "AND"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "contextmatcher",
+                                            "values": {
+                                                "contextType": "object",
+                                                "contextKey": "memory",
+                                                "objectKeyPath": "memory.current.httpCalls.searchProjects.results.total_count",
+                                                "objectValue": "0"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "show specific projects",
+                    "actions": [
+                        "show_specific_projects"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(search_project)",
+                                "occurrence": "lastStep"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "standup",
+            "behaviorRules": [
+                {
+                    "name": "ask for project",
+                    "actions": [
+                        "ask_for_project"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(prepare_standup)"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

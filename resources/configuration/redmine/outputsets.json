@@ -1,0 +1,58 @@
+{
+    "outputSet": [
+        {
+            "action": "ask_for_project",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Sure! Which project do you want to talk about?",
+                        "OK, just tell me which project.",
+                        "Yep! Which project?"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "all_projects",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Here is a list of all active projects:<br> [# th:each=\"projects : ${memory.current.httpCalls.allProjects.projects}\" th:if=\"${projects.status} == 1\"] <a target=\"ecosystem\" href=\"https://ecosystem.cloudogu.com/redmine/projects/[(${projects.id})]\">[(${projects.name})]</a><br> [/]"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "show_specific_projects",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Here is a list of projects that you may want to talk about:<br> [# th:each=\"projects : ${memory.current.httpCalls.searchProjects.results}\"] <a target=\"ecosystem\" href=\"https://ecosystem.cloudogu.com/redmine/projects/[(${projects.id})]\"> [(${projects.title})] </a><br> [/]"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "no_project_found",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Sorry, there is no project which deals with '[[${memory.current.input}]]'. Try another one."
+                    ]
+                }
+            ],
+            "quickReplies": []
+        }
+    ]
+}

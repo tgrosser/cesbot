@@ -1,0 +1,11 @@
+HTTP/1.1 100 Continue
+
+HTTP/1.1 201 Created
+Date: Tue, 04 Dec 2018 11:47:11 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization, Content-Type
+Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+Access-Control-Expose-Headers: location
+Location: eddi://ai.labs.output/outputstore/outputsets/5c06693fc9e77c00091db7e5?version=1
+Content-Length: 0
+

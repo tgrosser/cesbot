@@ -1,0 +1,31 @@
+{
+    "words": [
+        {
+            "word": "project",
+            "exp": "trigger(search_project)",
+            "frequency": 0
+        },
+        {
+            "word": "standup",
+            "exp": "trigger(prepare_standup)"
+        }
+    ],
+    "phrases": [
+        {
+            "phrase": "show me all projects",
+            "exp": "trigger(all_projects)"
+        },
+        {
+            "phrase": "show all projects",
+            "exp": "trigger(all_projects)"
+        },
+        {
+            "phrase": "all projects",
+            "exp": "trigger(all_projects)"
+        },
+        {
+            "phrase": "prepare standup",
+            "exp": "trigger(prepare_standup)"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "Name": "official/cesbot",
+    "Version": "4.4.0-1",
+    "DisplayName": "CES Bot",
+    "Description": "A ChatOps Bot Server based on E.D.D.I.",
+    "Category": "Development Apps",
+    "Tags": [
+      "warp", "chat"
+    ],
+    "Logo": "https://cloudogu.com/images/dogus/cesbot.png",
+    "Url": "https://eddi.labs.ai/",
+    "Image": "registry.cloudogu.com/official/cesbot",
+    "Dependencies": [
+      "cas", "nginx", "mongo"
+    ],
+    "Volumes": [{
+      "Name": "data",
+      "Path": "/apiserver",
+      "Owner": "1000",
+      "Group": "1000",
+      "NeedsBackup": false
+    }],
+    "HealthChecks": [{
+      "Type": "tcp",
+      "Port": 7070
+    }, {
+      "Type": "state"
+    }]
+  }

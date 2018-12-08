@@ -1,0 +1,77 @@
+{
+    "words": [
+        {
+            "word": "hello",
+            "exp": "greetings(hello)",
+            "frequency": 0
+        },
+        {
+            "word": "hi",
+            "exp": "greetings(hi)",
+            "frequency": 0
+        },
+        {
+            "word": "weather",
+            "exp": "trigger(current_weather)",
+            "frequency": 0
+        },        
+        {
+            "word": "help",
+            "exp": "help(help)",
+            "frequency": 0
+        },        
+        {
+            "word": "fuck",
+            "exp": "rude(fuck)",
+            "frequency": 0
+        },        
+        {
+            "word": "good",
+            "exp": "feeling(good)",
+            "frequency": 0
+        },        
+        {
+            "word": "fine",
+            "exp": "feeling(good)",
+            "frequency": 0
+        }        
+    ],
+    "phrases": [
+        {
+            "phrase": "what is the weather",
+            "exp": "trigger(current_weather)"
+        },
+        {
+            "phrase": "whats the weather",
+            "exp": "trigger(current_weather)"
+        },
+        {
+            "phrase": "help me",
+            "exp": "help(help me)"
+        },
+        {
+            "phrase": "i need help",
+            "exp": "help(help me)"
+        },
+        {
+            "phrase": "fuck you",
+            "exp": "rude(fuck you)"
+        },
+        {
+            "phrase": "how are you",
+            "exp": "greetings(how_are_you)"
+        },
+        {
+            "phrase": "I am good",
+            "exp": "feeling(good)"
+        },        
+        {
+            "phrase": "I'm good, thanks",
+            "exp": "feeling(good)"
+        },        
+        {
+            "phrase": "I'm fine, thanks",
+            "exp": "feeling(good)"
+        }
+    ]
+}

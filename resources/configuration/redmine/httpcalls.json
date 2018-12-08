@@ -1,0 +1,51 @@
+{
+    "targetServer": "https://ecosystem.cloudogu.com/redmine",
+    "httpCalls": [
+        {
+            "name": "allProjects",
+            "saveResponse": true,
+            "responseObjectName": "allProjects",
+            "actions": [
+                "all_projects"
+            ],
+            "request": {
+                "path": "/projects.json",
+                "headers": {},
+                "queryParams": {
+                    "key": "a87f3512800275985eb0e0a45de86ce7d2e026da",
+                    "limit": "100"
+                },
+                "method": "get",
+                "contentType": "",
+                "body": ""
+            }
+        },
+        {
+            "name": "searchProjects",
+            "saveResponse": true,
+            "responseObjectName": "searchProjects",
+            "actions": [
+                "show_specific_projects"
+            ],
+            "request": {
+                "path": "/search.json",
+                "headers": {},
+                "queryParams": {
+                    "key": "a87f3512800275985eb0e0a45de86ce7d2e026da",
+                    "scope": "all",
+                    "all_words": "1",
+                    "titles_only": "",
+                    "projects": "1",
+                    "attachments": "0",
+                    "options": "1",
+                    "commit": "OK",
+                    "q": "[[${memory.current.input}]]",
+                    "limit": "100"
+                },
+                "method": "get",
+                "contentType": "",
+                "body": ""
+            }
+        }
+    ]
+}

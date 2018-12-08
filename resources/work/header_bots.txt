@@ -1,0 +1,9 @@
+HTTP/1.1 201 Created
+Date: Tue, 04 Dec 2018 11:47:12 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: authorization, Content-Type
+Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+Access-Control-Expose-Headers: location
+Location: eddi://ai.labs.bot/botstore/bots/5c066940c9e77c00091db7e7?version=1
+Content-Length: 0
+

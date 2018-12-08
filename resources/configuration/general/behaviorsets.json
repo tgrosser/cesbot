@@ -1,0 +1,150 @@
+{
+    "behaviorGroups": [
+        {
+            "name": "welcome",
+            "behaviorRules": [
+                {
+                    "name": "hello",
+                    "actions": [
+                        "reply_how_are_you"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "greetings(how_are_you)"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "hello",
+                    "actions": [
+                        "say_hello"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "greetings(*)"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                  "name": "feeling good",
+                  "actions": [
+                      "reply_feeling_good"
+                  ],
+                  "children": [
+                      {
+                          "type": "inputmatcher",
+                          "values": {
+                              "expressions": "feeling(good)"
+                          },
+                          "children": []
+                      }
+                  ]
+              }
+            ]
+        },
+        {
+            "name": "weather conversation",
+            "behaviorRules": [
+                {
+                    "name": "Ask for City",
+                    "actions": [
+                        "ask_for_city"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(current_weather)"
+                            },
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Current Weather in City",
+                    "actions": [
+                        "current_weather_in_city"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "trigger(current_weather)",
+                                "occurrence": "lastStep"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "rude language",
+            "behaviorRules": [
+                {
+                    "name": "rude",
+                    "actions": [
+                        "dont_be_rude"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "rude(*)"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "help",
+            "behaviorRules": [
+                {
+                    "name": "offer help",
+                    "actions": [
+                        "offer_help"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "help(*)"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "pet",
+            "behaviorRules": [
+                {
+                    "name": "ask for pet",
+                    "actions": [
+                        "pet"
+                    ],
+                    "children": [
+                        {
+                            "type": "inputmatcher",
+                            "values": {
+                                "expressions": "pet"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

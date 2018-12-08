@@ -1,0 +1,115 @@
+{
+    "outputSet": [
+        {
+            "action": "say_hello",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Hi, dude!",
+                        "Howdy!",
+                        "Hello"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "reply_how_are_you",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Fine, thanks! How are you?"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "reply_feeling_good",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Oh, that's good to hear! How can I help you?",
+                        "Great! What can I help you with?"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "ask_for_city",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Which City would you like to know the weather of?"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "current_weather_in_city",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "The current weather situation of [[${memory.current.input}]] is [[${memory.current.httpCalls.currentWeather.weather[0].description}]] at [[${memory.current.httpCalls.currentWeather.main.temp}]] °C"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "dont_be_rude",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Please, don't be rude.",
+                        "Watch your language!"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "offer_help",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "Enter 'all projects' for example."
+                    ]
+                }
+            ],
+            "quickReplies": []
+        },
+        {
+            "action": "pet",
+            "timesOccurred": 0,
+            "outputs": [
+                {
+                    "type": "text",
+                    "valueAlternatives": [
+                        "No.",
+                        "I like trains.",
+                        "Interesting question.",
+                        "Is this some sort of turing test?"
+                    ]
+                }
+            ],
+            "quickReplies": []
+        }
+    ]
+}
